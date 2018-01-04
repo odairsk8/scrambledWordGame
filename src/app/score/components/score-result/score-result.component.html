@@ -1,0 +1,11 @@
+<h1 class="text-primary">{{result.message.main}}</h1>
+<h3 class="text-muted">{{result.message.second}}</h3>
+<div *ngIf="result.statistics">
+  <p *ngFor="let item of result.statistics">
+    <b>{{ item.name }} : </b> {{item.value}}</p>
+</div>
+
+<button class="btn btn-primary" (click)="newGame()">
+  <i class="fa fa-play"></i> New Game</button>
+<button class="btn btn-outline-danger" (click)="reset()">
+  <i class="fa fa-refresh"></i> Reset </button>

@@ -1,0 +1,19 @@
+<div class="container">
+  <ng-container *ngIf="!engine.result; else resultTemplate">
+    <app-challenge-question></app-challenge-question>
+    <app-scrambled-word *ngIf="gameEngine.currentMove" [scrambledWord]="gameEngine.currentMove">
+    </app-scrambled-word>
+    <br>
+    <app-guess-input (onGuessWord)="guess($event)"></app-guess-input>
+    <div class="scoreContainer">
+      <app-hits-badge></app-hits-badge>
+      <app-level-badge></app-level-badge>
+      <app-word-list-badge></app-word-list-badge>
+    </div>
+  </ng-container>
+  <ng-template #resultTemplate>
+    <app-score-result [result]="engine.result" (newGameClick)="startGame()"></app-score-result>
+  </ng-template>
+
+
+</div>

@@ -1,0 +1,23 @@
+/* You can add global styles to this file, and also import other style files */
+
+.nav-link {
+  cursor: pointer;
+}
+
+.container {
+  margin: 10px auto;
+  text-align: center;
+}
+
+button {
+  cursor: pointer;
+}
+
+.scrambled-letter {
+  font-size: 25pt !important;
+  margin-right: 5px;
+}
+
+.badge {
+  font-size: 15pt;
+}

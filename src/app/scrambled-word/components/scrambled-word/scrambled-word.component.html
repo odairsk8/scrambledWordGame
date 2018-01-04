@@ -1,0 +1,6 @@
+<div *ngIf="scrambledWord">
+  <div>
+    <span *ngFor="let item of scrambledWord.scrambled.split('')" class="badge badge-pill badge-dark scrambled-letter">{{item}}</span>
+  </div>
+  <span *ngIf="isDevMode">{{scrambledWord.original}}</span>
+</div>
